@@ -8,7 +8,7 @@ namespace pSC08
 {
     public class cnn
     {
-        public static string db = @"Data Source=REUDYS\SQLEXPRESS; Initial Catalog=dbpractica04; User ID=sa; Password=reyballoon";
+        public static string db = @"Data Source=REUDYS; Initial Catalog=DBpractica04; User ID=sa; Password=reyballoon";
     }
 
 }

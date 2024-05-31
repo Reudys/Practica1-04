@@ -101,7 +101,7 @@ namespace pSC08
         {
             // SELECT CLAVE FROM USUARIO WHERE NOMBRECORTO = 'JUANC'
             string miQuery = "SELECT CLAVE " +
-                             "  FROM USUARIO " +
+                             "  FROM dbo.USUARIO " +
                              " WHERE NOMBRECORTO = '" + cualUsuario + "'";
 
             SqlConnection cnxn = new SqlConnection(cnn.db);  // le indico la conexion a utilizar para la base de datos
