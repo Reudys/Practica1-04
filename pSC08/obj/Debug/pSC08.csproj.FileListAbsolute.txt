@@ -22,3 +22,4 @@ C:\Users\Rey\Desktop\Aplicaciones\Programs\Programas\Programacion 1\pSC08\pSC08\
 C:\Users\Rey\Desktop\Aplicaciones\Programs\Programas\Programacion 1\pSC08\pSC08\obj\Debug\pSC08.csproj.CoreCompileInputs.cache
 C:\Users\Rey\Desktop\Aplicaciones\Programs\Programas\Programacion 1\pSC08\pSC08\obj\Debug\pSC08.exe
 C:\Users\Rey\Desktop\Aplicaciones\Programs\Programas\Programacion 1\pSC08\pSC08\obj\Debug\pSC08.pdb
+C:\Users\Rey\Desktop\Aplicaciones\Programs\Programas\Programacion 1\pSC08\pSC08\obj\Debug\pSC08.frmPuesto.resources

@@ -43,13 +43,13 @@ namespace pSC08
             this.alfabeticoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesDelMenúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.permisosAUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,11 +62,12 @@ namespace pSC08
             this.consultaToolStripMenuItem,
             this.reporteToolStripMenuItem,
             this.aToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // menuGeneralToolStripMenuItem
             // 
@@ -78,44 +79,46 @@ namespace pSC08
             this.facturaToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuGeneralToolStripMenuItem.Name = "menuGeneralToolStripMenuItem";
-            this.menuGeneralToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.menuGeneralToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
             this.menuGeneralToolStripMenuItem.Text = "Registro";
             // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // puestoDeTrabajoToolStripMenuItem
             // 
             this.puestoDeTrabajoToolStripMenuItem.Name = "puestoDeTrabajoToolStripMenuItem";
-            this.puestoDeTrabajoToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.puestoDeTrabajoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.puestoDeTrabajoToolStripMenuItem.Text = "Puesto de Trabajo";
+            this.puestoDeTrabajoToolStripMenuItem.Click += new System.EventHandler(this.puestoDeTrabajoToolStripMenuItem_Click);
             // 
             // departamentoToolStripMenuItem
             // 
             this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.departamentoToolStripMenuItem.Text = "Departamento";
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // facturaToolStripMenuItem
             // 
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.facturaToolStripMenuItem.Text = "Factura";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // consultaToolStripMenuItem
@@ -124,7 +127,7 @@ namespace pSC08
             this.estadoDeCuentaToolStripMenuItem,
             this.alfabeticoDeClientesToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
             this.consultaToolStripMenuItem.Text = "Consulta";
             // 
             // estadoDeCuentaToolStripMenuItem
@@ -144,7 +147,7 @@ namespace pSC08
             this.reporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.facturaToolStripMenuItem1});
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
-            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
             this.reporteToolStripMenuItem.Text = "Reporte";
             // 
             // facturaToolStripMenuItem1
@@ -153,22 +156,33 @@ namespace pSC08
             this.facturaToolStripMenuItem1.Size = new System.Drawing.Size(139, 26);
             this.facturaToolStripMenuItem1.Text = "Factura";
             // 
-            // pictureBox1
+            // aToolStripMenuItem
             // 
-            this.pictureBox1.Image = global::pSC08.Properties.Resources.Barrick;
-            this.pictureBox1.Location = new System.Drawing.Point(408, 216);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(328, 168);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opcionesDelMenúToolStripMenuItem,
+            this.permisosAUsuariosToolStripMenuItem});
+            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.aToolStripMenuItem.Text = "Configuración";
+            // 
+            // opcionesDelMenúToolStripMenuItem
+            // 
+            this.opcionesDelMenúToolStripMenuItem.Name = "opcionesDelMenúToolStripMenuItem";
+            this.opcionesDelMenúToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.opcionesDelMenúToolStripMenuItem.Text = "Opciones del Menú";
+            // 
+            // permisosAUsuariosToolStripMenuItem
+            // 
+            this.permisosAUsuariosToolStripMenuItem.Name = "permisosAUsuariosToolStripMenuItem";
+            this.permisosAUsuariosToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.permisosAUsuariosToolStripMenuItem.Text = "Permisos a Usuarios";
             // 
             // menuStrip2
             // 
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(800, 30);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -184,26 +198,15 @@ namespace pSC08
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // aToolStripMenuItem
+            // pictureBox1
             // 
-            this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcionesDelMenúToolStripMenuItem,
-            this.permisosAUsuariosToolStripMenuItem});
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
-            this.aToolStripMenuItem.Text = "Configuración";
-            // 
-            // opcionesDelMenúToolStripMenuItem
-            // 
-            this.opcionesDelMenúToolStripMenuItem.Name = "opcionesDelMenúToolStripMenuItem";
-            this.opcionesDelMenúToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.opcionesDelMenúToolStripMenuItem.Text = "Opciones del Menú";
-            // 
-            // permisosAUsuariosToolStripMenuItem
-            // 
-            this.permisosAUsuariosToolStripMenuItem.Name = "permisosAUsuariosToolStripMenuItem";
-            this.permisosAUsuariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.permisosAUsuariosToolStripMenuItem.Text = "Permisos a Usuarios";
+            this.pictureBox1.Image = global::pSC08.Properties.Resources.Barrick;
+            this.pictureBox1.Location = new System.Drawing.Point(408, 216);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(328, 168);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frmMenu
             // 

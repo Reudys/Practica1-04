@@ -38,5 +38,21 @@ namespace pSC08
             frmUsuario frm = new frmUsuario();
             frm.Show();
         }
+
+        private void puestoDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPuesto frm = new frmPuesto();
+            frm.Show();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
