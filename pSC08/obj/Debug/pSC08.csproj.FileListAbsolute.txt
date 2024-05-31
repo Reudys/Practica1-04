@@ -1,0 +1,12 @@
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\bin\Debug\pSC08.exe.config
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\bin\Debug\pSC08.exe
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\bin\Debug\pSC08.pdb
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\obj\Debug\pSC08.csproj.AssemblyReference.cache
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\obj\Debug\pSC08.Properties.Resources.resources
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\obj\Debug\pSC08.csproj.GenerateResource.cache
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\obj\Debug\pSC08.csproj.CoreCompileInputs.cache
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\obj\Debug\pSC08.exe
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\obj\Debug\pSC08.pdb
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\obj\Debug\pSC08.frmStarts.resources
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\obj\Debug\pSC08.frmMenu.resources
+C:\ITLA 2024 C2\PRG 1 SC 08\pSC08\pSC08\obj\Debug\pSC08.frmUsuario.resources
