@@ -45,6 +45,8 @@ namespace pSC08
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtPuesto = new System.Windows.Forms.TextBox();
             this.lblPuesto = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -165,22 +167,27 @@ namespace pSC08
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(224, 32);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(280, 168);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(656, 32);
+            this.txtNombre.Size = new System.Drawing.Size(512, 32);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(280, 208);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(656, 32);
+            this.txtCorreo.Size = new System.Drawing.Size(512, 32);
             this.txtCorreo.TabIndex = 2;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // txtPassword
             // 
@@ -190,6 +197,7 @@ namespace pSC08
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(224, 32);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtPuesto
             // 
@@ -198,23 +206,38 @@ namespace pSC08
             this.txtPuesto.Name = "txtPuesto";
             this.txtPuesto.Size = new System.Drawing.Size(224, 32);
             this.txtPuesto.TabIndex = 4;
+            this.txtPuesto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPuesto_KeyDown);
+            this.txtPuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPuesto_KeyPress);
+            this.txtPuesto.Leave += new System.EventHandler(this.txtPuesto_Leave);
             // 
             // lblPuesto
             // 
             this.lblPuesto.BackColor = System.Drawing.Color.White;
             this.lblPuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuesto.Location = new System.Drawing.Point(568, 288);
+            this.lblPuesto.Location = new System.Drawing.Point(280, 333);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(368, 32);
+            this.lblPuesto.Size = new System.Drawing.Size(512, 32);
             this.lblPuesto.TabIndex = 15;
             this.lblPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.Image = global::pSC08.Properties.Resources.usericon;
+            this.pictureBox1.Location = new System.Drawing.Point(846, 128);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 192);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 403);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblPuesto);
             this.Controls.Add(this.txtPuesto);
             this.Controls.Add(this.txtPassword);
@@ -236,6 +259,7 @@ namespace pSC08
             this.Text = "frmUsuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUsuario_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +283,6 @@ namespace pSC08
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtPuesto;
         private System.Windows.Forms.Label lblPuesto;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
