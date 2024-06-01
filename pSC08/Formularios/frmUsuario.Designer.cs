@@ -63,6 +63,7 @@ namespace pSC08
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Image = global::pSC08.Properties.Resources.saveicon2;
             this.btnGuardar.Location = new System.Drawing.Point(504, 0);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(144, 88);
@@ -74,6 +75,7 @@ namespace pSC08
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.Image = global::pSC08.Properties.Resources.clearicon;
             this.btnLimpiar.Location = new System.Drawing.Point(648, 0);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(144, 88);
@@ -85,6 +87,7 @@ namespace pSC08
             // 
             // btnBorrar
             // 
+            this.btnBorrar.Image = global::pSC08.Properties.Resources.deleteicon;
             this.btnBorrar.Location = new System.Drawing.Point(792, 0);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(144, 88);
@@ -96,6 +99,7 @@ namespace pSC08
             // 
             // btnSalir
             // 
+            this.btnSalir.Image = global::pSC08.Properties.Resources.exiticon;
             this.btnSalir.Location = new System.Drawing.Point(936, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(144, 88);

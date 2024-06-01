@@ -21,5 +21,10 @@ namespace pSC08
         {
             this.Text = "Puestos de Trabajo";
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
