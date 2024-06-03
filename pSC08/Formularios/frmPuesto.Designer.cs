@@ -33,12 +33,11 @@ namespace pSC08
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblPuesto = new System.Windows.Forms.Label();
-            this.txtPuesto = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtIdDepartamento = new System.Windows.Forms.TextBox();
+            this.txtNombreFabrica = new System.Windows.Forms.TextBox();
+            this.txtIdFabrica = new System.Windows.Forms.TextBox();
+            this.txtNombrePosicion = new System.Windows.Forms.TextBox();
+            this.txtIdPosition = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@ namespace pSC08
             this.label2 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.textNombreDepartamento = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -80,6 +80,7 @@ namespace pSC08
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // label1
             // 
@@ -94,57 +95,46 @@ namespace pSC08
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lblPuesto
+            // txtIdDepartamento
             // 
-            this.lblPuesto.BackColor = System.Drawing.Color.White;
-            this.lblPuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuesto.Location = new System.Drawing.Point(392, 332);
-            this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(512, 32);
-            this.lblPuesto.TabIndex = 27;
-            this.lblPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtIdDepartamento.Location = new System.Drawing.Point(392, 287);
+            this.txtIdDepartamento.Multiline = true;
+            this.txtIdDepartamento.Name = "txtIdDepartamento";
+            this.txtIdDepartamento.Size = new System.Drawing.Size(224, 32);
+            this.txtIdDepartamento.TabIndex = 21;
             // 
-            // txtPuesto
+            // txtNombreFabrica
             // 
-            this.txtPuesto.Location = new System.Drawing.Point(392, 287);
-            this.txtPuesto.Multiline = true;
-            this.txtPuesto.Name = "txtPuesto";
-            this.txtPuesto.Size = new System.Drawing.Size(224, 32);
-            this.txtPuesto.TabIndex = 21;
+            this.txtNombreFabrica.Location = new System.Drawing.Point(392, 247);
+            this.txtNombreFabrica.Multiline = true;
+            this.txtNombreFabrica.Name = "txtNombreFabrica";
+            this.txtNombreFabrica.PasswordChar = '*';
+            this.txtNombreFabrica.Size = new System.Drawing.Size(512, 32);
+            this.txtNombreFabrica.TabIndex = 20;
             // 
-            // txtPassword
+            // txtIdFabrica
             // 
-            this.txtPassword.Location = new System.Drawing.Point(392, 247);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(224, 32);
-            this.txtPassword.TabIndex = 20;
+            this.txtIdFabrica.Location = new System.Drawing.Point(392, 207);
+            this.txtIdFabrica.Multiline = true;
+            this.txtIdFabrica.Name = "txtIdFabrica";
+            this.txtIdFabrica.Size = new System.Drawing.Size(224, 32);
+            this.txtIdFabrica.TabIndex = 19;
             // 
-            // txtCorreo
+            // txtNombrePosicion
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(392, 207);
-            this.txtCorreo.Multiline = true;
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(224, 32);
-            this.txtCorreo.TabIndex = 19;
+            this.txtNombrePosicion.Location = new System.Drawing.Point(392, 167);
+            this.txtNombrePosicion.Multiline = true;
+            this.txtNombrePosicion.Name = "txtNombrePosicion";
+            this.txtNombrePosicion.Size = new System.Drawing.Size(512, 32);
+            this.txtNombrePosicion.TabIndex = 18;
             // 
-            // txtNombre
+            // txtIdPosition
             // 
-            this.txtNombre.Location = new System.Drawing.Point(392, 167);
-            this.txtNombre.Multiline = true;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(512, 32);
-            this.txtNombre.TabIndex = 18;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(392, 127);
-            this.txtUsuario.Multiline = true;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(224, 32);
-            this.txtUsuario.TabIndex = 17;
+            this.txtIdPosition.Location = new System.Drawing.Point(392, 127);
+            this.txtIdPosition.Multiline = true;
+            this.txtIdPosition.Name = "txtIdPosition";
+            this.txtIdPosition.Size = new System.Drawing.Size(224, 32);
+            this.txtIdPosition.TabIndex = 17;
             // 
             // label6
             // 
@@ -172,7 +162,7 @@ namespace pSC08
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.PowderBlue;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(152, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(232, 32);
@@ -225,18 +215,27 @@ namespace pSC08
             this.label7.Text = "Nombre del Departamento";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // textNombreDepartamento
+            // 
+            this.textNombreDepartamento.Location = new System.Drawing.Point(392, 332);
+            this.textNombreDepartamento.Multiline = true;
+            this.textNombreDepartamento.Name = "textNombreDepartamento";
+            this.textNombreDepartamento.PasswordChar = '*';
+            this.textNombreDepartamento.Size = new System.Drawing.Size(512, 32);
+            this.textNombreDepartamento.TabIndex = 29;
+            // 
             // frmPuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 403);
+            this.Controls.Add(this.textNombreDepartamento);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblPuesto);
-            this.Controls.Add(this.txtPuesto);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtIdDepartamento);
+            this.Controls.Add(this.txtNombreFabrica);
+            this.Controls.Add(this.txtIdFabrica);
+            this.Controls.Add(this.txtNombrePosicion);
+            this.Controls.Add(this.txtIdPosition);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -250,6 +249,7 @@ namespace pSC08
             this.Name = "frmPuesto";
             this.Text = "frmPuesto";
             this.Load += new System.EventHandler(this.frmPuesto_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmPuesto_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,17 +262,17 @@ namespace pSC08
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblPuesto;
-        private System.Windows.Forms.TextBox txtPuesto;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtIdDepartamento;
+        private System.Windows.Forms.TextBox txtNombreFabrica;
+        private System.Windows.Forms.TextBox txtIdFabrica;
+        private System.Windows.Forms.TextBox txtNombrePosicion;
+        private System.Windows.Forms.TextBox txtIdPosition;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textNombreDepartamento;
     }
 }
