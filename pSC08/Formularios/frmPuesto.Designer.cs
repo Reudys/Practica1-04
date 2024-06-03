@@ -44,13 +44,13 @@ namespace pSC08
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
+            this.btnSalir.Image = global::pSC08.Properties.Resources.exiticon;
             this.btnSalir.Location = new System.Drawing.Point(937, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(144, 88);
@@ -61,6 +61,7 @@ namespace pSC08
             // 
             // btnBorrar
             // 
+            this.btnBorrar.Image = global::pSC08.Properties.Resources.deleteicon;
             this.btnBorrar.Location = new System.Drawing.Point(793, 0);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(144, 88);
@@ -71,6 +72,7 @@ namespace pSC08
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.Image = global::pSC08.Properties.Resources.clearicon;
             this.btnLimpiar.Location = new System.Drawing.Point(649, 0);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(144, 88);
@@ -97,7 +99,7 @@ namespace pSC08
             this.lblPuesto.BackColor = System.Drawing.Color.White;
             this.lblPuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuesto.Location = new System.Drawing.Point(293, 332);
+            this.lblPuesto.Location = new System.Drawing.Point(392, 332);
             this.lblPuesto.Name = "lblPuesto";
             this.lblPuesto.Size = new System.Drawing.Size(512, 32);
             this.lblPuesto.TabIndex = 27;
@@ -105,7 +107,7 @@ namespace pSC08
             // 
             // txtPuesto
             // 
-            this.txtPuesto.Location = new System.Drawing.Point(293, 287);
+            this.txtPuesto.Location = new System.Drawing.Point(392, 287);
             this.txtPuesto.Multiline = true;
             this.txtPuesto.Name = "txtPuesto";
             this.txtPuesto.Size = new System.Drawing.Size(224, 32);
@@ -113,7 +115,7 @@ namespace pSC08
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(293, 247);
+            this.txtPassword.Location = new System.Drawing.Point(392, 247);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -122,15 +124,15 @@ namespace pSC08
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(293, 207);
+            this.txtCorreo.Location = new System.Drawing.Point(392, 207);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(512, 32);
+            this.txtCorreo.Size = new System.Drawing.Size(224, 32);
             this.txtCorreo.TabIndex = 19;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(293, 167);
+            this.txtNombre.Location = new System.Drawing.Point(392, 167);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(512, 32);
@@ -138,7 +140,7 @@ namespace pSC08
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(293, 127);
+            this.txtUsuario.Location = new System.Drawing.Point(392, 127);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(224, 32);
@@ -148,66 +150,58 @@ namespace pSC08
             // 
             this.label6.BackColor = System.Drawing.Color.PowderBlue;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(53, 287);
+            this.label6.Location = new System.Drawing.Point(152, 287);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(232, 32);
             this.label6.TabIndex = 26;
-            this.label6.Text = " Puesto de Trabajo";
+            this.label6.Text = "ID del Departamento";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.PowderBlue;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(53, 247);
+            this.label5.Location = new System.Drawing.Point(152, 247);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(232, 32);
             this.label5.TabIndex = 25;
-            this.label5.Text = " Password";
+            this.label5.Text = "Nombre de la Fabrica";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.PowderBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(53, 207);
+            this.label4.Location = new System.Drawing.Point(152, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(232, 32);
             this.label4.TabIndex = 24;
-            this.label4.Text = " Correo Electronico";
+            this.label4.Text = "ID de Fabrica";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.PowderBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 167);
+            this.label3.Location = new System.Drawing.Point(152, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 32);
             this.label3.TabIndex = 23;
-            this.label3.Text = " Nombre Completo";
+            this.label3.Text = " Nombre de la Posición";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.PowderBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 127);
+            this.label2.Location = new System.Drawing.Point(152, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(232, 32);
             this.label2.TabIndex = 22;
-            this.label2.Text = " Usuario";
+            this.label2.Text = "ID de Posición";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Location = new System.Drawing.Point(859, 127);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 192);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnGuardar
             // 
@@ -220,12 +214,23 @@ namespace pSC08
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.PowderBlue;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(152, 332);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(232, 32);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Nombre del Departamento";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmPuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 403);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.lblPuesto);
             this.Controls.Add(this.txtPuesto);
             this.Controls.Add(this.txtPassword);
@@ -245,7 +250,6 @@ namespace pSC08
             this.Name = "frmPuesto";
             this.Text = "frmPuesto";
             this.Load += new System.EventHandler(this.frmPuesto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,7 +262,6 @@ namespace pSC08
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.TextBox txtPuesto;
         private System.Windows.Forms.TextBox txtPassword;
@@ -270,5 +273,6 @@ namespace pSC08
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
     }
 }

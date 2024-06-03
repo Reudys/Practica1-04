@@ -119,6 +119,7 @@ namespace pSC08
             this.label2.TabIndex = 5;
             this.label2.Text = " Usuario";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
