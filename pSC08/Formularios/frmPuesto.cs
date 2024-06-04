@@ -60,7 +60,7 @@ namespace pSC08
             txtNombrePosicion.Clear(); // Clear --> limpia el contenido del textbox
             txtIdPosicion.Clear();
             txtNombreFabrica.Clear();
-            txtNombreDepartamento.Clear();
+            txtIDDepartamento.Clear();
         }
 
         private void txtIdPosition_TextChanged(object sender, EventArgs e)
@@ -80,27 +80,28 @@ namespace pSC08
             }
         }
 
-        private void BuscarUsuario(string nombrePosicion)
+        private void BuscarUsuario(String IdPosicion)
         {
             SqlConnection cnx = new SqlConnection(cnn.db);
             cnx.Open();
 
-            string stQuery = "SELECT T1.NombreDePosicion, T1.Fabrica, T1.Departamento, T2.NombreDefabrica, T3.NombreDePosicion " +
+            string stQuery = "SELECT T1.NombreDePosicion, T1.Fabrica, T1.Departamento, T2.NombreDefabrica, T2.IDfabrica " +
                              "FROM POSICIONES T1 " +
                              "INNER JOIN FABRICA T2 ON T1.Fabrica = T2.IDfabrica " +
                              "INNER JOIN POSICIONES T3 ON T1.Departamento = T3.IDposicion " +
-                             "WHERE T1.NombreDePosicion = @A";
+                             "WHERE T1.IDposicion = @A";
 
             SqlCommand cmd = new SqlCommand(stQuery, cnx); //Enviamos el script al motor de SQL
-            cmd.Parameters.AddWithValue("@A", nombrePosicion); //Declaro la variable y le asigno su valor correspondiente
+            cmd.Parameters.AddWithValue("@A", IdPosicion); //Declaro la variable y le asigno su valor correspondiente
             SqlDataReader rcd = cmd.ExecuteReader();
 
             if (rcd.Read()) // Aquí pregunta HasRow = true
             {
-                txtNombrePosicion.Text = rcd["txtNombrePosicion"].ToString();
-                txtIdPosicion.Text = rcd["txtIdPosicion"].ToString();
-                txtNombreFabrica.Text = rcd["txtNombreFabrica"].ToString();
-                txtNombreDepartamento.Text = rcd["txtNombreDepartamento"].ToString();
+                //txtIdPosicion.Text = rcd[""].ToString();
+                txtNombrePosicion.Text = rcd["NombreDePosicion"].ToString();
+                txtIdFabrica.Text = rcd["IDfabrica"].ToString();
+                txtNombreFabrica.Text = rcd["Fabrica"].ToString();
+                txtIDDepartamento.Text = rcd["Departamento"].ToString();
             }
         }
 
@@ -125,7 +126,29 @@ namespace pSC08
 
         private void txtNombrePosicion_Leave(object sender, EventArgs e)
         {
-            BuscarUsuario(txtNombrePosicion.Text);
+            
+        }
+
+        private void txtIdPosicion_Leave_1(object sender, EventArgs e)
+        {
+            BuscarUsuario(txtIdPosicion.Text);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdPosicion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)  // aqui que si la tecla que presionaste es igual a ENTER
+            {
+                e.Handled = true;
+                if (txtIdPosicion.Text.Trim() != string.Empty)  // aqui pregunta que si el textbox es diferente de vacio
+                {
+                    txtNombrePosicion.Focus();  // mueve el cursor hacia el textbox txtPuesto
+                }
+            }
         }
     }
 }

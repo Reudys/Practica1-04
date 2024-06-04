@@ -33,7 +33,7 @@ namespace pSC08
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNombreDepartamento = new System.Windows.Forms.TextBox();
+            this.txtIDDepartamento = new System.Windows.Forms.TextBox();
             this.txtNombreFabrica = new System.Windows.Forms.TextBox();
             this.txtIdPosicion = new System.Windows.Forms.TextBox();
             this.txtNombrePosicion = new System.Windows.Forms.TextBox();
@@ -42,6 +42,8 @@ namespace pSC08
             this.label2 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtIdFabrica = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -91,38 +93,40 @@ namespace pSC08
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtNombreDepartamento
+            // txtIDDepartamento
             // 
-            this.txtNombreDepartamento.Location = new System.Drawing.Point(394, 283);
-            this.txtNombreDepartamento.Multiline = true;
-            this.txtNombreDepartamento.Name = "txtNombreDepartamento";
-            this.txtNombreDepartamento.PasswordChar = '*';
-            this.txtNombreDepartamento.Size = new System.Drawing.Size(512, 32);
-            this.txtNombreDepartamento.TabIndex = 20;
-            this.txtNombreDepartamento.TextChanged += new System.EventHandler(this.txtNombreDepartamento_TextChanged);
+            this.txtIDDepartamento.Location = new System.Drawing.Point(394, 243);
+            this.txtIDDepartamento.Multiline = true;
+            this.txtIDDepartamento.Name = "txtIDDepartamento";
+            this.txtIDDepartamento.PasswordChar = '*';
+            this.txtIDDepartamento.Size = new System.Drawing.Size(512, 32);
+            this.txtIDDepartamento.TabIndex = 20;
+            this.txtIDDepartamento.TextChanged += new System.EventHandler(this.txtNombreDepartamento_TextChanged);
             // 
             // txtNombreFabrica
             // 
-            this.txtNombreFabrica.Location = new System.Drawing.Point(394, 239);
+            this.txtNombreFabrica.Location = new System.Drawing.Point(682, 200);
             this.txtNombreFabrica.Multiline = true;
             this.txtNombreFabrica.Name = "txtNombreFabrica";
-            this.txtNombreFabrica.Size = new System.Drawing.Size(512, 32);
+            this.txtNombreFabrica.Size = new System.Drawing.Size(224, 32);
             this.txtNombreFabrica.TabIndex = 19;
             // 
             // txtIdPosicion
             // 
-            this.txtIdPosicion.Location = new System.Drawing.Point(394, 199);
+            this.txtIdPosicion.Location = new System.Drawing.Point(267, 160);
             this.txtIdPosicion.Multiline = true;
             this.txtIdPosicion.Name = "txtIdPosicion";
-            this.txtIdPosicion.Size = new System.Drawing.Size(224, 32);
+            this.txtIdPosicion.Size = new System.Drawing.Size(172, 32);
             this.txtIdPosicion.TabIndex = 18;
+            this.txtIdPosicion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPosicion_KeyPress);
+            this.txtIdPosicion.Leave += new System.EventHandler(this.txtIdPosicion_Leave_1);
             // 
             // txtNombrePosicion
             // 
-            this.txtNombrePosicion.Location = new System.Drawing.Point(394, 159);
+            this.txtNombrePosicion.Location = new System.Drawing.Point(682, 160);
             this.txtNombrePosicion.Multiline = true;
             this.txtNombrePosicion.Name = "txtNombrePosicion";
-            this.txtNombrePosicion.Size = new System.Drawing.Size(512, 32);
+            this.txtNombrePosicion.Size = new System.Drawing.Size(224, 32);
             this.txtNombrePosicion.TabIndex = 17;
             this.txtNombrePosicion.TextChanged += new System.EventHandler(this.txtIdPosition_TextChanged);
             this.txtNombrePosicion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPosition_KeyPress);
@@ -132,7 +136,7 @@ namespace pSC08
             // 
             this.label5.BackColor = System.Drawing.Color.PowderBlue;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(156, 242);
+            this.label5.Location = new System.Drawing.Point(444, 200);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(232, 32);
             this.label5.TabIndex = 25;
@@ -144,20 +148,21 @@ namespace pSC08
             // 
             this.label3.BackColor = System.Drawing.Color.PowderBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(154, 159);
+            this.label3.Location = new System.Drawing.Point(445, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 32);
             this.label3.TabIndex = 23;
             this.label3.Text = " Nombre de la Posición";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.PowderBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(156, 199);
+            this.label2.Location = new System.Drawing.Point(157, 160);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 32);
+            this.label2.Size = new System.Drawing.Size(104, 32);
             this.label2.TabIndex = 22;
             this.label2.Text = "ID de Posición";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,21 +183,42 @@ namespace pSC08
             // 
             this.label7.BackColor = System.Drawing.Color.PowderBlue;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(156, 283);
+            this.label7.Location = new System.Drawing.Point(156, 243);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(232, 32);
             this.label7.TabIndex = 28;
-            this.label7.Text = "Nombre del Departamento";
+            this.label7.Text = "Departamento";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.PowderBlue;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(157, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 32);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "ID de Posición";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtIdFabrica
+            // 
+            this.txtIdFabrica.Location = new System.Drawing.Point(267, 200);
+            this.txtIdFabrica.Multiline = true;
+            this.txtIdFabrica.Name = "txtIdFabrica";
+            this.txtIdFabrica.Size = new System.Drawing.Size(172, 32);
+            this.txtIdFabrica.TabIndex = 30;
             // 
             // frmPuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 403);
+            this.Controls.Add(this.txtIdFabrica);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtNombreDepartamento);
+            this.Controls.Add(this.txtIDDepartamento);
             this.Controls.Add(this.txtNombreFabrica);
             this.Controls.Add(this.txtIdPosicion);
             this.Controls.Add(this.txtNombrePosicion);
@@ -220,7 +246,7 @@ namespace pSC08
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNombreDepartamento;
+        private System.Windows.Forms.TextBox txtIDDepartamento;
         private System.Windows.Forms.TextBox txtNombreFabrica;
         private System.Windows.Forms.TextBox txtIdPosicion;
         private System.Windows.Forms.TextBox txtNombrePosicion;
@@ -228,5 +254,7 @@ namespace pSC08
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtIdFabrica;
     }
 }
