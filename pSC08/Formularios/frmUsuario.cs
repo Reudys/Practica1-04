@@ -178,7 +178,6 @@ namespace pSC08
                 txtCorreo.Text = rcd["CORREO"].ToString();
                 txtPassword.Text = rcd["CLAVE"].ToString();
                 txtPuesto.Text = rcd["POSICION"].ToString();
-
             }
         }
 
