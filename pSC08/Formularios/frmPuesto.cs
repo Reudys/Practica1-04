@@ -85,23 +85,22 @@ namespace pSC08
             SqlConnection cnx = new SqlConnection(cnn.db);
             cnx.Open();
 
-            string stQuery = "SELECT T1.IDposicion, T1.NombreDePosicion, T1.Fabrica, T1.Departamento, " +
-            "T2.NombreDefabrica, T3.NombreDepartamento " +
-            "FROM POSICIONES T1 " +
-            "INNER JOIN FABRICA T2 ON T1.Fabrica = T2.IDfabrica " +
-            "INNER JOIN DEPARTAMENTO T3 ON T1.Departamento = T3.IDdepartamento " +
-            "WHERE T1.NombreDePosicion = @nombrePosicion";
+            string stQuery = "SELECT T1.NombreDePosicion, T1.Fabrica, T1.Departamento, T2.NombreDefabrica, T3.NombreDePosicion " +
+                             "FROM POSICIONES T1 " +
+                             "INNER JOIN FABRICA T2 ON T1.Fabrica = T2.IDfabrica " +
+                             "INNER JOIN POSICIONES T3 ON T1.Departamento = T3.IDposicion " +
+                             "WHERE T1.NombreDePosicion = @A";
 
             SqlCommand cmd = new SqlCommand(stQuery, cnx); //Enviamos el script al motor de SQL
-            cmd.Parameters.AddWithValue("@nombrePosicion", nombrePosicion); //Declaro la variable y le asigno su valor correspondiente
+            cmd.Parameters.AddWithValue("@A", nombrePosicion); //Declaro la variable y le asigno su valor correspondiente
             SqlDataReader rcd = cmd.ExecuteReader();
 
             if (rcd.Read()) // Aquí pregunta HasRow = true
             {
-                txtNombrePosicion.Text = rcd["NombreDePosicion"].ToString();
-                txtIdPosicion.Text = rcd["IDposicion"].ToString();
-                txtNombreFabrica.Text = rcd["Fabrica"].ToString();
-                txtNombreDepartamento.Text = rcd["Departamento"].ToString();
+                txtNombrePosicion.Text = rcd["txtNombrePosicion"].ToString();
+                txtIdPosicion.Text = rcd["txtIdPosicion"].ToString();
+                txtNombreFabrica.Text = rcd["txtNombreFabrica"].ToString();
+                txtNombreDepartamento.Text = rcd["txtNombreDepartamento"].ToString();
             }
         }
 
