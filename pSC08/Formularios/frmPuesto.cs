@@ -60,7 +60,7 @@ namespace pSC08
             txtNombrePosicion.Clear(); // Clear --> limpia el contenido del textbox
             txtIdPosicion.Clear();
             txtNombreFabrica.Clear();
-            txtIDDepartamento.Clear();
+            txtIdDepartamento.Clear();
         }
 
         private void txtIdPosition_TextChanged(object sender, EventArgs e)
@@ -97,11 +97,10 @@ namespace pSC08
 
             if (rcd.Read()) // Aquí pregunta HasRow = true
             {
-                //txtIdPosicion.Text = rcd[""].ToString();
                 txtNombrePosicion.Text = rcd["NombreDePosicion"].ToString();
                 txtIdFabrica.Text = rcd["IDfabrica"].ToString();
-                txtNombreFabrica.Text = rcd["Fabrica"].ToString();
-                txtIDDepartamento.Text = rcd["Departamento"].ToString();
+                txtNombreFabrica.Text = rcd["NombreDefabrica"].ToString();
+                txtIdDepartamento.Text = rcd["Departamento"].ToString();
             }
         }
 

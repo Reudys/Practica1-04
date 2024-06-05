@@ -33,7 +33,6 @@ namespace pSC08
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIDDepartamento = new System.Windows.Forms.TextBox();
             this.txtNombreFabrica = new System.Windows.Forms.TextBox();
             this.txtIdPosicion = new System.Windows.Forms.TextBox();
             this.txtNombrePosicion = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@ namespace pSC08
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdFabrica = new System.Windows.Forms.TextBox();
+            this.txtIdDepartamento = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -92,16 +92,6 @@ namespace pSC08
             this.label1.Text = "Puestos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtIDDepartamento
-            // 
-            this.txtIDDepartamento.Location = new System.Drawing.Point(394, 243);
-            this.txtIDDepartamento.Multiline = true;
-            this.txtIDDepartamento.Name = "txtIDDepartamento";
-            this.txtIDDepartamento.PasswordChar = '*';
-            this.txtIDDepartamento.Size = new System.Drawing.Size(512, 32);
-            this.txtIDDepartamento.TabIndex = 20;
-            this.txtIDDepartamento.TextChanged += new System.EventHandler(this.txtNombreDepartamento_TextChanged);
             // 
             // txtNombreFabrica
             // 
@@ -210,15 +200,23 @@ namespace pSC08
             this.txtIdFabrica.Size = new System.Drawing.Size(172, 32);
             this.txtIdFabrica.TabIndex = 30;
             // 
+            // txtIdDepartamento
+            // 
+            this.txtIdDepartamento.Location = new System.Drawing.Point(394, 243);
+            this.txtIdDepartamento.Multiline = true;
+            this.txtIdDepartamento.Name = "txtIdDepartamento";
+            this.txtIdDepartamento.Size = new System.Drawing.Size(224, 32);
+            this.txtIdDepartamento.TabIndex = 32;
+            // 
             // frmPuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 403);
+            this.Controls.Add(this.txtIdDepartamento);
             this.Controls.Add(this.txtIdFabrica);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtIDDepartamento);
             this.Controls.Add(this.txtNombreFabrica);
             this.Controls.Add(this.txtIdPosicion);
             this.Controls.Add(this.txtNombrePosicion);
@@ -246,7 +244,6 @@ namespace pSC08
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIDDepartamento;
         private System.Windows.Forms.TextBox txtNombreFabrica;
         private System.Windows.Forms.TextBox txtIdPosicion;
         private System.Windows.Forms.TextBox txtNombrePosicion;
@@ -256,5 +253,6 @@ namespace pSC08
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdFabrica;
+        private System.Windows.Forms.TextBox txtIdDepartamento;
     }
 }
