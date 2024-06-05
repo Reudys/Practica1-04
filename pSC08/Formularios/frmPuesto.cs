@@ -21,7 +21,7 @@ namespace pSC08
         private void frmPuesto_Load(object sender, EventArgs e)
         {
             this.KeyPreview = true; //Activa las teclas de funciones
-            this.Text = "Puestos de Trabajo"; //Cambiamos el titulo del formulario
+            this.Text = "Maestro de Puestos"; //Cambiamos el titulo del formulario
         }
 
         private void label1_Click(object sender, EventArgs e)
