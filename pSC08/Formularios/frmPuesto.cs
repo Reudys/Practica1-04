@@ -119,7 +119,7 @@ namespace pSC08
 
         }
 
-        //Metodos
+        //------------------------Metodos-------------------------
         private void LimpiarFormulario()
         {
             txtNombrePosicion.Clear(); // Clear --> limpia el contenido del textbox
