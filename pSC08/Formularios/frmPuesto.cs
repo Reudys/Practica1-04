@@ -24,20 +24,6 @@ namespace pSC08
             this.Text = "Maestro de Puestos"; //Cambiamos el titulo del formulario
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmPuesto_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape) // pregunta si presionaste la tecla escape
@@ -46,23 +32,14 @@ namespace pSC08
             }
         }
 
-        //---------------Btns-------------------
-
-
+        //----------------------------Botones---------------------------------
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarFormulario();  // este metodo limpiara los textbox y los label
             txtNombrePosicion.Focus();   // envia el cursor hacia el textbox txtUsuario
         }
 
-        private void LimpiarFormulario()
-        {
-            txtNombrePosicion.Clear(); // Clear --> limpia el contenido del textbox
-            txtIdPosicion.Clear();
-            txtNombreFabrica.Clear();
-            txtIdDepartamento.Clear();
-        }
-
+        //--------------------------TexBox-------------------------------------
         private void txtIdPosition_TextChanged(object sender, EventArgs e)
         {
 
@@ -78,6 +55,77 @@ namespace pSC08
                     txtIdPosicion.Focus();  // mueve el cursor hacia el textbox txtNombre
                 }
             }
+        }
+
+        private void txtIdPosicion_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreDepartamento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombrePosicion_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdPosicion_Leave_1(object sender, EventArgs e)
+        {
+            BuscarUsuario(txtIdPosicion.Text);
+        }
+
+        private void txtIdPosicion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)  // aqui que si la tecla que presionaste es igual a ENTER
+            {
+                e.Handled = true;
+                if (txtIdPosicion.Text.Trim() != string.Empty)  // aqui pregunta que si el textbox es diferente de vacio
+                {
+                    txtNombrePosicion.Focus();  // mueve el cursor hacia el textbox txtPuesto
+                }
+            }
+        }
+
+        //------------------------Labels-------------------------------
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Metodos
+        private void LimpiarFormulario()
+        {
+            txtNombrePosicion.Clear(); // Clear --> limpia el contenido del textbox
+            txtIdPosicion.Clear();
+            txtNombreFabrica.Clear();
+            txtIdDepartamento.Clear();
         }
 
         private void BuscarUsuario(String IdPosicion)
@@ -101,52 +149,6 @@ namespace pSC08
                 txtIdFabrica.Text = rcd["IDfabrica"].ToString();
                 txtNombreFabrica.Text = rcd["NombreDefabrica"].ToString();
                 txtIdDepartamento.Text = rcd["Departamento"].ToString();
-            }
-        }
-
-        private void txtIdPosicion_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombreDepartamento_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombrePosicion_Leave(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtIdPosicion_Leave_1(object sender, EventArgs e)
-        {
-            BuscarUsuario(txtIdPosicion.Text);
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIdPosicion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((int)e.KeyChar == (int)Keys.Enter)  // aqui que si la tecla que presionaste es igual a ENTER
-            {
-                e.Handled = true;
-                if (txtIdPosicion.Text.Trim() != string.Empty)  // aqui pregunta que si el textbox es diferente de vacio
-                {
-                    txtNombrePosicion.Focus();  // mueve el cursor hacia el textbox txtPuesto
-                }
             }
         }
     }
