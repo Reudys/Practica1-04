@@ -229,7 +229,11 @@ namespace pSC08
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1102, 450);
+            this.MinimumSize = new System.Drawing.Size(1102, 450);
             this.Name = "frmPuesto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPuesto";
             this.Load += new System.EventHandler(this.frmPuesto_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmPuesto_KeyDown);
