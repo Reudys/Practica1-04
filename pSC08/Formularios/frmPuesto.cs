@@ -45,6 +45,11 @@ namespace pSC08
 
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void txtIdPosition_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((int)e.KeyChar == (int)Keys.Enter)  // aqui que si la tecla que presionaste es igual a ENTER
@@ -125,6 +130,7 @@ namespace pSC08
             txtNombrePosicion.Clear(); // Clear --> limpia el contenido del textbox
             txtIdPosicion.Clear();
             txtNombreFabrica.Clear();
+            txtIdFabrica.Clear();
             txtIdDepartamento.Clear();
         }
 

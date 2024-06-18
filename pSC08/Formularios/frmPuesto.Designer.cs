@@ -52,10 +52,11 @@ namespace pSC08
             this.btnSalir.Location = new System.Drawing.Point(937, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(144, 88);
-            this.btnSalir.TabIndex = 13;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnBorrar
             // 
@@ -63,7 +64,7 @@ namespace pSC08
             this.btnBorrar.Location = new System.Drawing.Point(793, 0);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(144, 88);
-            this.btnBorrar.TabIndex = 12;
+            this.btnBorrar.TabIndex = 7;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -74,7 +75,7 @@ namespace pSC08
             this.btnLimpiar.Location = new System.Drawing.Point(649, 0);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(144, 88);
-            this.btnLimpiar.TabIndex = 11;
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -99,7 +100,7 @@ namespace pSC08
             this.txtNombreFabrica.Multiline = true;
             this.txtNombreFabrica.Name = "txtNombreFabrica";
             this.txtNombreFabrica.Size = new System.Drawing.Size(224, 32);
-            this.txtNombreFabrica.TabIndex = 19;
+            this.txtNombreFabrica.TabIndex = 3;
             // 
             // txtIdPosicion
             // 
@@ -107,7 +108,7 @@ namespace pSC08
             this.txtIdPosicion.Multiline = true;
             this.txtIdPosicion.Name = "txtIdPosicion";
             this.txtIdPosicion.Size = new System.Drawing.Size(172, 32);
-            this.txtIdPosicion.TabIndex = 18;
+            this.txtIdPosicion.TabIndex = 0;
             this.txtIdPosicion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPosicion_KeyPress);
             this.txtIdPosicion.Leave += new System.EventHandler(this.txtIdPosicion_Leave_1);
             // 
@@ -117,7 +118,7 @@ namespace pSC08
             this.txtNombrePosicion.Multiline = true;
             this.txtNombrePosicion.Name = "txtNombrePosicion";
             this.txtNombrePosicion.Size = new System.Drawing.Size(224, 32);
-            this.txtNombrePosicion.TabIndex = 17;
+            this.txtNombrePosicion.TabIndex = 1;
             this.txtNombrePosicion.TextChanged += new System.EventHandler(this.txtIdPosition_TextChanged);
             this.txtNombrePosicion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPosition_KeyPress);
             this.txtNombrePosicion.Leave += new System.EventHandler(this.txtNombrePosicion_Leave);
@@ -164,7 +165,7 @@ namespace pSC08
             this.btnGuardar.Location = new System.Drawing.Point(505, 0);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(144, 88);
-            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -198,7 +199,7 @@ namespace pSC08
             this.txtIdFabrica.Multiline = true;
             this.txtIdFabrica.Name = "txtIdFabrica";
             this.txtIdFabrica.Size = new System.Drawing.Size(172, 32);
-            this.txtIdFabrica.TabIndex = 30;
+            this.txtIdFabrica.TabIndex = 2;
             // 
             // txtIdDepartamento
             // 
@@ -206,7 +207,7 @@ namespace pSC08
             this.txtIdDepartamento.Multiline = true;
             this.txtIdDepartamento.Name = "txtIdDepartamento";
             this.txtIdDepartamento.Size = new System.Drawing.Size(224, 32);
-            this.txtIdDepartamento.TabIndex = 32;
+            this.txtIdDepartamento.TabIndex = 4;
             // 
             // frmPuesto
             // 
