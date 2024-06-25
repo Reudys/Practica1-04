@@ -13,6 +13,8 @@ namespace pSC08
 {
     public partial class frmPuesto : Form
     {
+        Boolean dataIsShow;
+
         public frmPuesto()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace pSC08
         {
             this.KeyPreview = true; //Activa las teclas de funciones
             this.Text = "Maestro de Puestos"; //Cambiamos el titulo del formulario
+            dataIsShow = false;
         }
 
         private void frmPuesto_KeyDown(object sender, KeyEventArgs e)
@@ -37,6 +40,19 @@ namespace pSC08
         {
             LimpiarFormulario();  // este metodo limpiara los textbox y los label
             txtNombrePosicion.Focus();   // envia el cursor hacia el textbox txtUsuario
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (dataIsShow != false) {
+                BorrarUsuario(txtIdPosicion.Text);
+                LimpiarFormulario();
+                txtNombrePosicion.Focus();
+            } else
+            {
+                //Muestra un mensaje en pantalla diciendo el siguiente texto, agrega un boton "OK" y un icono de error
+                MessageBox.Show("No se han encontrado los datos que desea borrar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //--------------------------TexBox-------------------------------------
@@ -133,10 +149,13 @@ namespace pSC08
             txtNombreFabrica.Clear();
             txtIdFabrica.Clear();
             txtIdDepartamento.Clear();
+
+            dataIsShow = false;
         }
 
         private void BuscarUsuario(String IdPosicion)
         {
+            dataIsShow = false;
             SqlConnection cnx = new SqlConnection(cnn.db);
             cnx.Open();
 
@@ -156,7 +175,26 @@ namespace pSC08
                 txtIdFabrica.Text = rcd["IDfabrica"].ToString();
                 txtNombreFabrica.Text = rcd["NombreDefabrica"].ToString();
                 txtIdDepartamento.Text = rcd["Departamento"].ToString();
+
+                dataIsShow = true;
             }
+        }
+
+        private void BorrarUsuario(String IdPosicion)
+        {
+            SqlConnection connection = new SqlConnection(cnn.db);
+            connection.Open();
+
+            string Query = @"
+                                DELET FROM POSICIONES WHERE IDPOSICIONES = @A
+                            ";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@A", IdPosicion);
+
+            command.ExecuteNonQuery(); //Utilizado para borrar, insertar y actualizar datos
+            command.Dispose(); // Borramos el Query utilizado
+            connection.Close(); // Cerramos la base de datos
         }
     }
 }
